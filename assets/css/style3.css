@@ -1,0 +1,64 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(255, 248, 230), rgb(215, 255, 252));
+    color: #333;
+  }
+  
+  header {
+    background-color:  rgb(102, 219, 209, 0.5);
+    padding: 20px;
+    text-align: center;
+    font-family: arial black;
+  }
+  
+  header h1{
+      color: rgb(74, 177, 169);
+      font-family: arial black;
+  }
+  
+  .container {
+    max-width: 1000px;        
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: gray;
+  }
+  
+  .poster {
+    flex: 1 1 300px;
+    min-width: 250px;
+  }
+  
+  .poster img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .resenha {
+    flex: 2 1 600px;
+  }
+  
+  h1, h2 {
+    color: rgb(102, 219, 209);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color:  rgba(58, 159, 151, 0.3) ;
+    color: rgb(35, 126, 119);
+    margin-top: 40px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  

@@ -1,0 +1,152 @@
+body {
+    font-family: arial black;
+    background-color: rgb(255, 251, 238);
+    height: 100vh;
+    margin: 0;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    display: flex;
+    gap: 20px;
+    background-color: rgb(255, 243, 196);
+    margin: 20px 70px 150px 70px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 100px rgb(209, 207, 187);
+    border: 2px solid rgba(255, 211, 123, 0.2);
+}
+
+header img {
+    margin-top: 12px;
+    margin-left: 40px;
+}
+
+header h2 {
+    color: rgb(252, 214, 79);
+}
+
+header nav {
+    margin-top: 25px;
+    margin-left: 950px;
+}
+
+nav a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(252, 214, 79);
+}
+
+nav a:hover {
+    color: #cfa231;
+}
+
+/* ===== MAIN ===== */
+
+main {
+    margin-left: 80px;
+}
+
+main h1 {
+    margin-bottom: -2px;
+    color: rgb(97, 97, 97);
+    font-size: 70px;
+}
+
+main p {
+    font-size: larger;
+    font-family: arial;
+    color: rgb(188, 188, 188);
+    margin-bottom: 200px;
+}
+
+main h2 {
+    font-size: 50px;
+    color: gray;
+    margin-left: 20px;
+}
+
+/* ===== FILMES ===== */
+
+.filmes {
+    margin-top: 20px;
+    background-color: white;
+    padding: 40px;
+    margin-left: 10px;
+    margin-right: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 100px rgb(209, 207, 187);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.filmes h1 {
+    font-size: 50px;
+}
+
+.filmes p {
+    margin-bottom: 20px;
+}
+
+.filmes a {
+    margin-top: 30px;
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(252, 214, 79);
+}
+
+/* ===== SEÇÕES DE FILMES ===== */
+
+.filmesdupla1 {
+    display: flex;
+}
+
+#klaus {
+    margin-right: 750px;
+}
+
+#recomendados {
+    color: #f8a57f;
+    margin-bottom: 10px;
+}
+
+#assistidos {
+    color: #45958e;
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
+#castelo {
+    border: 10px solid #f8a57f;
+}
+
+#princesa {
+    border: 10px solid #45958e;
+}
+
+/* ===== STAR ===== */
+
+.star {
+    display: flex;
+}
+
+.star img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    margin-top: 300px;
+    background-color: rgb(250, 235, 177);
+    font-family: arial;
+    color: rgb(160, 160, 160);
+    padding: 50px;
+}
+
+footer p {
+    margin-left: 500px;
+    color: rgb(252, 214, 79);
+}

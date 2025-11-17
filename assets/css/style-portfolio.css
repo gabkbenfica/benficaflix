@@ -1,0 +1,1188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,792;1,9..40,792&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+:root{
+    --dm-sans: "DM Sans", sans-serif;
+    --cursive: "Cedarville Cursive", cursive;
+    --primary-yellow: #FFE479;
+    --light-yellow: #FFF3C5;
+    --dark-gray: #232323;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--dark-gray);
+    font-family: var(--dm-sans);
+}
+
+/* Corrigido: Usando #Home, não #hero. Garantindo que ocupa a tela inteira */
+#Home{
+    position: relative;
+    z-index: 1;
+    min-height: 100vh; /* FORÇA a seção a ter a altura de uma tela, empurrando o resto para baixo */
+}
+
+#background{
+    z-index: -1;
+    position: absolute;
+}
+
+header {
+    margin-top: 50px;
+    margin-left: 150px;
+    padding: 20px 30px;
+    background-color: var(--primary-yellow);
+    border-radius: 100px;
+    border: 3px solid var(--light-yellow);
+    display: flex;
+    width: 900px;
+    position: fixed;
+        transition: 
+        background-color 0.9s ease,
+        backdrop-filter 0.6s ease,
+        border-bottom-color 0.6s ease;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 4000;
+}
+
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-family: var(--dm-sans);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out, width 0.3s ease;
+}
+
+header a:hover,
+header a.active {
+    background-color: var(--light-yellow);
+}
+
+#display-ilustration-fedev{
+    position: absolute;
+    display: flex;
+    color: var(--primary-yellow);
+    font-family: var(--cursive);
+    margin-top: 130px;
+    font-size: 50px;
+    margin-left: 180px;
+}   
+
+#display-ilustration-fedev #fe-dev{
+    margin-left: 750px;
+    margin-top: -20px;
+    line-height: 0.9; 
+}
+
+/* Corrigido: Removido z-index: -1 para que o texto "port" não suma atrás do fundo */
+#display-eye-port-t{
+    position: absolute;
+    display: flex;
+    font-family: var(--dm-sans);
+    color: white;
+    margin-left: 180px;
+    font-size: 230px;
+    letter-spacing: -30px;
+    /* z-index: -1; <--- REMOVIDO */
+}
+
+.letter-coursive{
+    font-family: var(--cursive);
+    color: var(--primary-yellow);
+    font-size: 600px;
+    margin-top: -300px;
+    margin-left: -100px;
+}
+
+#eye{
+    margin-left: -760px;
+    margin-top: -170px;
+}
+
+#display-farp-gd-folio-f{
+    position: absolute;
+    z-index: 5;
+    margin-left: 520px;
+    margin-top: 170px;
+    display: flex;
+    font-family: var(--dm-sans);
+    color: white;
+    font-size: 230px;
+}
+
+#gd{
+    position: absolute;
+    display: flex;
+    color: var(--primary-yellow);
+    font-family: var(--cursive);
+    margin-top: 450px;
+    margin-left: -350px;
+    font-size: 50px;
+    line-height: 0.9; 
+}
+
+#folio{
+    margin-top: 100px;
+    margin-left: -300px;
+    z-index: -1;
+    letter-spacing: -20px;
+}
+
+#farpinha-gd{
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 470px;
+}
+
+#display-arrow-ui{
+    display: flex;
+    color: var(--primary-yellow);
+    font-family: var(--cursive);
+    line-height: 0.9; 
+    font-size: 50px;
+    gap: 20px;
+    position: absolute;
+    margin-top: 755px;
+    margin-left: 900px;
+}
+
+
+#Sobre-mim{
+    position: relative;
+    min-height: 100vh;
+}
+
+#background-people{
+    position: absolute;
+    z-index: -2;
+
+    right: 0;
+    margin-top: -800px;
+}
+
+
+#user-name-info {
+    position: absolute;
+    top: 70px; 
+    left: 80px;
+    z-index: 3; 
+
+    font-family: var(--dm-sans);
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+#user-name-info h1 {
+    margin-top: 700px;
+    line-height: 1;
+}
+
+#user-name-info h1:last-child {
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+#display-sobre-mim{
+    font-size: 80px;
+    color: white;
+    font-family: var(--dm-sans);
+    margin-left: 150px;
+    margin-top: 300px;
+    display: flex;
+}
+
+#s-letter-coursive{
+    font-family: var(--cursive);
+    color: var(--primary-yellow);
+    font-size: 350px;
+    margin-top: -250px;
+    margin-left: -800px;
+
+}
+
+#Benfica{
+    color: var(--primary-yellow);
+}
+
+#display-nome-idade{
+    display: flex;
+    color: white;
+    gap: 20px;
+
+    font-size: 30px;
+}
+
+#age-number{
+    font-size: 150px;
+    margin-top: -15px;
+    color: var(--primary-yellow);
+}
+
+#Benfica-surname{
+    color: var(--primary-yellow);
+    font-size: 70px;
+}
+
+#biography-text{
+    color: white;
+    margin-bottom: 30px;
+}
+
+#content-sobre-mim{
+    margin-left: 150px;
+    margin-top: -150px;
+    font-family: var(--dm-sans);
+
+}
+
+#Competências{
+    background-color: var(--primary-yellow);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#display-competencias{
+    display: flex;
+    font-family: var(--dm-sans);
+    margin-top: 100px;
+    font-size: 70px;
+    color: var(--dark-gray);
+    margin-right: -400px 
+}
+
+#pet-letter-coursive{
+    position: absolute;
+    font-family: var(--cursive);
+    color: white;
+    font-size: 170px;
+    margin-top: -70px;
+    margin-left: 330px;
+}
+
+#display-1-dg{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card-compet{
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 20px;
+    height: 350px;
+    width: 270px;
+    margin-top: 40px;
+    border: 13px solid white;
+    border-radius: 35px;
+    font-family: var(--dm-sans);
+    backdrop-filter: blur(15px);
+    transition: transform 0.9s ease;
+    
+}
+
+.card-compet li{
+    margin-left: 30px;
+    margin-top: 20px;
+    
+}
+
+.card-compet ul{
+    margin-top: 40px;
+    font-size: 20px;
+
+}
+
+.card-compet:hover{
+    transform: scale(1.1);
+}
+
+#display-cards{
+    position: absolute;
+    display: flex;
+    gap: 40px;
+}
+
+#display-trabalhos{
+    display: flex;
+    font-size: 70px;
+    color: var(--primary-yellow);
+    font-family: var(--dm-sans);
+    margin-left: 120px;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+}
+
+#Trabalho{
+    height: 100vh;
+}
+
+#trabalhos-letter-coursive{
+    font-family: var(--cursive);
+    color: white;
+    font-size: 120px;
+    margin-left: -300px;
+}
+
+#display-fotos{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+}
+
+#display-fotos img{
+    margin-bottom: 15px;
+}
+
+#display-fotos p{
+    font-family: var(--dm-sans);
+    text-align: center;
+    font-size: small;
+    color: rgba(255, 255, 255, 0.834);
+}
+
+
+
+#Acadêmico {
+  display: flex;
+
+  height: 100vh; /* toda a seção ocupa a tela */
+  background-color: var(--primary-yellow);
+
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+.left {
+  flex: 1;
+  background-color: #fff5c5;
+  padding: 60px 50px;
+  border-right: 5px solid #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-blur {
+  font-size: 90px;
+  font-weight: 700;
+  color: var(--dark-gray);
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  z-index: -1;
+}
+
+.instituicao {
+  margin-bottom: 40px;
+  margin-left: 70px;
+  font-size: 100px;
+
+}
+
+.instituicao h3 {
+  font-weight: 700;
+  color: #232323;
+  font-size: 50px;
+  margin-bottom: 4px;
+}
+
+.instituicao p {
+  font-size: 16px;
+  color: #444;
+}
+
+.right {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.ferramentas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 50px;
+}
+
+.ferramentas span {
+  border: 5px solid #000;
+  border-radius: 50px;
+  padding: 5px 22px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.contato {
+  list-style: none;
+}
+
+.contato li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contato a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+}
+
+#inst{
+    margin-top: 200px;
+    margin-left: -20px;
+}
+
+footer {
+    background-color: #11111198;
+    color: #f5f5f5;
+    padding: 40px 8%;
+    margin-top: 100px;
+    font-family: var(--dm-sans);
+    border-radius: 50px 50px 0 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-left img.footer-logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-center ul.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-center ul.footer-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-center ul.footer-links a:hover {
+    color: #f1c232; /* um amarelo suave */
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.footer-socials a img {
+    width: 24px;
+    margin-left: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-socials a img:hover {
+    opacity: 1;
+}
+
+header.scrolled {
+    background-color: rgba(255, 247, 163, 0.396);
+    backdrop-filter: blur(10px);
+    border: none;
+}
+
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+
+/* Tablets e telas médias (1024px e abaixo) */
+@media (max-width: 1024px) {
+    header {
+        width: 700px;
+        margin-left: 50px;
+        padding: 15px 20px;
+    }
+    
+    header ul {
+        gap: 40px;
+    }
+    
+    header a {
+        font-size: 16px;
+    }
+    
+    /* Home ajustes */
+    #display-ilustration-fedev {
+        font-size: 35px;
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+    
+    #display-ilustration-fedev #fe-dev {
+        margin-left: 500px;
+    }
+    
+    #display-eye-port-t {
+        font-size: 150px;
+        margin-left: 100px;
+    }
+    
+    .letter-coursive {
+        font-size: 400px;
+        margin-top: -200px;
+    }
+    
+    #eye {
+        width: 180px;
+        margin-left: -500px;
+        margin-top: -120px;
+    }
+    
+    #display-farp-gd-folio-f {
+        font-size: 150px;
+        margin-left: 300px;
+        margin-top: 120px;
+    }
+    
+    #gd {
+        font-size: 35px;
+        margin-top: 300px;
+        margin-left: -250px;
+    }
+    
+    #folio {
+        margin-top: 80px;
+        margin-left: -200px;
+    }
+    
+    #farpinha-gd {
+        margin-left: -280px;
+        margin-top: 320px;
+        width: 80px;
+    }
+    
+    #display-arrow-ui {
+        font-size: 35px;
+        margin-top: 550px;
+        margin-left: 600px;
+    }
+    
+    /* Sobre mim */
+    #display-sobre-mim {
+        font-size: 60px;
+        margin-left: 80px;
+    }
+    
+    #s-letter-coursive {
+        font-size: 250px;
+        margin-left: -600px;
+        margin-top: -180px;
+    }
+    
+    #content-sobre-mim {
+        margin-left: 80px;
+    }
+    
+    #Benfica-surname {
+        font-size: 50px;
+    }
+    
+    #age-number {
+        font-size: 100px;
+    }
+    
+    #background-people {
+        width: 600px;
+        margin-top: -600px;
+    }
+    
+    /* Competências */
+    #display-competencias {
+        font-size: 50px;
+        margin-right: -250px;
+    }
+    
+    #pet-letter-coursive {
+        font-size: 120px;
+        margin-left: 220px;
+    }
+    
+    #display-cards {
+        gap: 30px;
+    }
+    
+    .card-compet {
+        width: 240px;
+        height: 320px;
+    }
+    
+    /* Trabalho */
+    #display-trabalhos {
+        font-size: 50px;
+        margin-left: 80px;
+    }
+    
+    #trabalhos-letter-coursive {
+        font-size: 90px;
+        margin-left: -220px;
+    }
+    
+    #display-fotos {
+        gap: 50px;
+    }
+    
+    /* Acadêmico */
+    .titulo-blur {
+        font-size: 60px;
+        left: 50px;
+    }
+    
+    .instituicao h3 {
+        font-size: 35px;
+    }
+    
+    .instituicao {
+        margin-left: 40px;
+    }
+    
+    #inst {
+        margin-top: 150px;
+    }
+}
+
+/* Tablets pequenos (768px e abaixo) */
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 20px;
+        padding: 12px 15px;
+    }
+    
+    header ul {
+        gap: 20px;
+    }
+    
+    header a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    /* Home simplificado */
+    #display-ilustration-fedev {
+        font-size: 25px;
+        margin-left: 30px;
+        margin-top: 120px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #display-ilustration-fedev #fe-dev {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    
+    #display-eye-port-t {
+        font-size: 100px;
+        margin-left: 30px;
+        margin-top: 250px;
+    }
+    
+    .letter-coursive {
+        font-size: 250px;
+        margin-top: -130px;
+        margin-left: -60px;
+    }
+    
+    #eye {
+        width: 120px;
+        margin-left: -320px;
+        margin-top: -80px;
+    }
+    
+    #display-farp-gd-folio-f {
+        font-size: 100px;
+        margin-left: 100px;
+        margin-top: 450px;
+        flex-wrap: wrap;
+    }
+    
+    #gd {
+        font-size: 25px;
+        margin-top: 200px;
+        margin-left: -180px;
+    }
+    
+    #folio {
+        margin-top: 50px;
+        margin-left: -150px;
+        letter-spacing: -10px;
+    }
+    
+    #farpinha-gd {
+        margin-left: -200px;
+        margin-top: 215px;
+        width: 80px;
+    }
+    
+    #display-arrow-ui {
+        font-size: 25px;
+        margin-top: 750px;
+        margin-left: 30px;
+    }
+    
+    #display-arrow-ui img {
+        width: 60px;
+    }
+    
+    /* Sobre mim */
+    #display-sobre-mim {
+        font-size: 45px;
+        margin-left: 30px;
+        margin-top: 150px;
+    }
+    
+    #s-letter-coursive {
+        font-size: 180px;
+        margin-left: -450px;
+        margin-top: -130px;
+    }
+    
+    #content-sobre-mim {
+        margin-left: 30px;
+        margin-top: -100px;
+    }
+    
+    #display-nome-idade {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #Benfica-surname {
+        font-size: 40px;
+    }
+    
+    #age-number {
+        font-size: 80px;
+        margin-top: 0;
+    }
+    
+    #biography-text {
+        font-size: 16px;
+    }
+    
+    #background-people {
+        width: 400px;
+        margin-top: -400px;
+    }
+    
+    /* Competências */
+    #Competências {
+        justify-content: center;
+        padding: 30px 20px;
+    }
+    
+    #display-competencias {
+        font-size: 40px;
+        margin-right: 0;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    #pet-letter-coursive {
+        font-size: 90px;
+        margin-left: 150px;
+        margin-top: -50px;
+    }
+    
+    #display-cards {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 100px;
+    }
+    
+    .card-compet {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .card-compet:hover {
+        transform: scale(1.05);
+    }
+    
+    #hayao {
+        display: none;
+    }
+    
+    /* Trabalho */
+    #display-trabalhos {
+        font-size: 40px;
+        margin-left: 30px;
+        margin-top: 80px;
+        flex-wrap: wrap;
+    }
+    
+    #trabalhos-letter-coursive {
+        font-size: 70px;
+        margin-left: -200px;
+    }
+    
+    #display-fotos {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+    
+    #display-fotos > div {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    /* Acadêmico */
+    #Acadêmico {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .left {
+        border-right: none;
+        border-bottom: 5px solid #fff;
+        padding: 40px 30px;
+    }
+    
+    .titulo-blur {
+        font-size: 45px;
+        left: 30px;
+        top: 30px;
+    }
+    
+    #inst {
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    
+    .instituicao {
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .instituicao h3 {
+        font-size: 28px;
+    }
+    
+    .right {
+        padding: 40px 30px;
+    }
+    
+    .right h1 {
+        font-size: 24px;
+    }
+    
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-right {
+        text-align: left;
+    }
+}
+
+/* Smartphones (480px e abaixo) */
+@media (max-width: 480px) {
+    header {
+        margin-top: 15px;
+        padding: 10px;
+    }
+    
+    header ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    /* Home ultra simplificado */
+    #display-ilustration-fedev {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+    
+    #display-eye-port-t {
+        font-size: 70px;
+        margin-left: 20px;
+        margin-top: 200px;
+    }
+    
+    .letter-coursive {
+        font-size: 180px;
+        margin-top: -100px;
+        margin-left: -40px;
+    }
+    
+    #eye {
+        width: 80px;
+        margin-left: -220px;
+        margin-top: -60px;
+    }
+    
+    #display-farp-gd-folio-f {
+        font-size: 70px;
+        margin-left: 20px;
+        margin-top: 350px;
+    }
+    
+    #gd {
+        font-size: 18px;
+        margin-top: 150px;
+        margin-left: -130px;
+    }
+    
+    #folio {
+        margin-top: 40px;
+        margin-left: -100px;
+        font-size: 70px;
+    }
+    
+    #farpinha-gd {
+        margin-left: -140px;
+        margin-top: 160px;
+        width: 60px;
+    }
+    
+    #display-farp-gd-folio-f img:last-child {
+        width: 80px;
+    }
+    
+    #display-arrow-ui {
+        font-size: 18px;
+        margin-top: 600px;
+        margin-left: 20px;
+        gap: 10px;
+    }
+    
+    #display-arrow-ui img {
+        width: 40px;
+    }
+    
+    /* Sobre mim */
+    #display-sobre-mim {
+        font-size: 35px;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+    
+    #s-letter-coursive {
+        font-size: 140px;
+        margin-left: -350px;
+        margin-top: -100px;
+    }
+    
+    #content-sobre-mim {
+        margin-left: 20px;
+        margin-top: -80px;
+    }
+    
+    #display-nome-idade h1 {
+        font-size: 28px;
+    }
+    
+    #Benfica-surname {
+        font-size: 32px;
+    }
+    
+    #age-number {
+        font-size: 60px;
+    }
+    
+    #biography-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    #biography-text br {
+        display: none;
+    }
+    
+    #background-people {
+        width: 300px;
+        margin-top: -300px;
+    }
+    
+    #logos-section img {
+        width: 60px;
+    }
+    
+    /* Competências */
+    #display-competencias {
+        font-size: 32px;
+        margin-top: 30px;
+    }
+    
+    #pet-letter-coursive {
+        font-size: 70px;
+        margin-left: 100px;
+    }
+    
+    #display-cards {
+        margin-top: 80px;
+    }
+    
+    .card-compet {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .card-compet h2 {
+        font-size: 18px;
+    }
+    
+    .card-compet ul {
+        font-size: 16px;
+    }
+    
+    /* Trabalho */
+    #display-trabalhos {
+        font-size: 32px;
+        margin-left: 20px;
+        margin-top: 60px;
+    }
+    
+    #trabalhos-letter-coursive {
+        font-size: 55px;
+        margin-left: -150px;
+    }
+    
+    #display-fotos {
+        padding: 0 10px;
+    }
+    
+    #display-fotos > div {
+        width: 100%;
+    }
+    
+    /* Acadêmico */
+    .left {
+        padding: 30px 20px;
+    }
+    
+    .titulo-blur {
+        font-size: 35px;
+        left: 20px;
+        top: 20px;
+    }
+    
+    #inst {
+        margin-top: 80px;
+    }
+    
+    .instituicao {
+        margin-left: 10px;
+    }
+    
+    .instituicao h3 {
+        font-size: 22px;
+    }
+    
+    .instituicao p {
+        font-size: 14px;
+    }
+    
+    .right {
+        padding: 30px 20px;
+    }
+    
+    .right h1 {
+        font-size: 20px;
+    }
+    
+    .ferramentas span {
+        font-size: 13px;
+        padding: 4px 16px;
+        border-width: 3px;
+    }
+    
+    .contato li {
+        font-size: 13px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 30px 5%;
+        margin-top: 50px;
+    }
+    
+    .footer-left p,
+    .footer-center ul.footer-links a {
+        font-size: 12px;
+    }
+}
+
+
+
+
