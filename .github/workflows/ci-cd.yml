@@ -1,0 +1,77 @@
+name: BenficaFlix CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: benficaflix-${{ github.event_name == 'pull_request' && github.ref || 'pages' }}
+  cancel-in-progress: false
+
+jobs:
+  ci:
+    name: CI - Validar site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v6
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Configurar Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Preparar arquivos estáticos
+        run: |
+          mkdir _site
+          cp -r -- *.html assets _site/
+          printf '%s\n' "$GITHUB_SHA" > _site/revision.txt
+      - name: Validar referências locais
+        run: python .github/scripts/validate_site.py _site
+      - name: Verificar sintaxe JavaScript
+        run: find _site/assets -type f -name '*.js' -print0 | xargs -0 -r -n 1 node --check
+      - name: Enviar artefato para o GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  cd:
+    name: CD - Publicar e verificar
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verificar a versão publicada
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          site="${SITE_URL%/}"
+          for attempt in {1..12}; do
+            if revision=$(curl -fsSL --max-time 10 "$site/revision.txt?sha=$GITHUB_SHA") &&
+               [[ "$revision" == "$GITHUB_SHA" ]]; then
+              curl -fsSL --max-time 20 "$site/" -o /dev/null
+              curl -fsSL --max-time 20 "$site/assets/css/style%20copy.css" -o /dev/null
+              echo "Versão $revision disponível em $site/"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::A versão $GITHUB_SHA não foi encontrada em $site/"
+          exit 1
